@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 %html
   %head
-    %title Santa Rosa Charity
+    %title= @meta_tags[:title]
+
+    = meta_tags
+    = stylesheets
+    = javascript
   %body
-    = yield
+    .page-content{ class: "#{action}-action" }
+      = yield

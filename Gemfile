@@ -4,3 +4,9 @@ source "https://rubygems.org"
 gem "sinatra", github: "sinatra"
 
 gem "haml"
+gem "sass"
+
+group :development do
+  gem "pry"
+  gem "sinatra-reloader"
+end
