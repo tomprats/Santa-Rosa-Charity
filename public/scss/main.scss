@@ -1,12 +1,74 @@
-h1 {
-  color: green;
-  text-align: center;
+@import "variables";
+
+*, :before, :after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-color: $blue;
+}
+
+a {
+  color: white;
 }
 
 h2, h3 {
+  margin-top: 0;
+}
+
+.text-center {
   text-align: center;
 }
 
-p {
-  text-align: center;
+.img-responsive {
+  max-width: 100%;
+}
+
+.row {
+  &:before, &:after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+}
+
+.col-md-12 {
+  float: left;
+  width: percentage(12/12);
+  padding: 10px;
+}
+.col-md-6 {
+  float: left;
+  width: percentage(6/12);
+  padding: 10px;
+}
+.col-md-4 {
+  float: left;
+  width: percentage(4/12);
+  padding: 0 10px;
+}
+.col-md-offset-3 {
+  margin-left: percentage(3/12)
+}
+
+.page-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.love-link {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+@media screen and (max-width: $md-min) {
+  .love-link {
+    position: static;
+    text-align: center;
+  }
 }
