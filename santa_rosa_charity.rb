@@ -60,6 +60,8 @@ class SantaRosaCharity < Sinatra::Base
   end
 
   get "/" do
+    add_css("index")
+
     haml :index
   end
 end

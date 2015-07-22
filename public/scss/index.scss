@@ -1,0 +1,13 @@
+@import "variables";
+
+.world-background {
+  background: url("../img/world.jpg") no-repeat center center fixed;;
+  background-size: cover;
+
+  padding-top: 20px;
+}
+
+.water-background {
+  background: url("../img/water.jpg") no-repeat center center fixed;;
+  background-size: cover;
+}

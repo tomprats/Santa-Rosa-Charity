@@ -6,17 +6,27 @@
           box-sizing: border-box;
 }
 
+html, body {
+  margin: 0;
+}
+
 body {
   color: white;
   background-color: $blue;
+
+  font-family: arial, sans-serif;
 }
 
 a {
   color: white;
 }
 
-h2, h3 {
-  margin-top: 0;
+h1, h2, h3 {
+  margin: 0;
+}
+
+h2 {
+  margin-top: 10px;
 }
 
 .text-center {
@@ -27,6 +37,10 @@ h2, h3 {
   max-width: 100%;
 }
 
+.blue {
+  color: $blue;
+}
+
 .row {
   &:before, &:after {
     display: table;
@@ -35,11 +49,13 @@ h2, h3 {
   }
 }
 
-
-.page-content {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+.block {
+  padding: 20px;
+  display: inline-block;
+  background-color: rgba(0,0,0, 0.5);
+  h1:first-of-type {
+    padding-bottom: 10px;
+  }
 }
 
 .love-link {
@@ -55,9 +71,12 @@ h2, h3 {
   }
 }
 
+.col-md-offset-1,
+.col-md-offset-2,
 .col-md-offset-3,
 .col-md-4,
 .col-md-6,
+.col-md-10,
 .col-md-12 {
   float: left;
   width: 100%;
@@ -69,6 +88,9 @@ h2, h3 {
   .col-md-12 {
     width: percentage(12/12);
   }
+  .col-md-10 {
+    width: percentage(10/12);
+  }
   .col-md-6 {
     width: percentage(6/12);
   }
@@ -77,5 +99,8 @@ h2, h3 {
   }
   .col-md-offset-3 {
     margin-left: percentage(3/12)
+  }
+  .col-md-offset-1 {
+    margin-left: percentage(1/12)
   }
 }
