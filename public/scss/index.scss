@@ -7,9 +7,11 @@
   padding-top: 20px;
   color: black;
   h1 { color: white; }
+  hr { border-color: black; }
 }
 
 .water-background {
   background: url("../img/water.jpg") no-repeat center center fixed;;
   background-size: cover;
+  hr { border-color: white; }
 }
