@@ -8,16 +8,18 @@ set :environments, %w{development production staging}
 class SantaRosaCharity < Sinatra::Base
   before do
     @meta_tags = {}
-    @meta_tags[:title] = "Santa Rosa Charity BBQ"
-    @meta_tags[:site_name] = "Santa Rosa Charity BBQ"
-    @meta_tags[:url] = request.base_url
-    # @meta_tags[:image] = "https://cdn.traitify.com/my/images/logos/square.png"
+    @meta_tags["og:title"] = @meta_tags["twitter:title"] = "Santa Rosa Charity"
+    @meta_tags["og:description"] = @meta_tags["twitter:description"] = "A charity event for Santa Rosa, Guatemala to fund the children’s nutritional program, a new clean water system, and a middle school education."
+    @meta_tags["og:site_name"] = "Santa Rosa Charity"
+    @meta_tags["og:url"] = request.base_url
+    @meta_tags["og:image"] = @meta_tags["twitter:image"] = "#{request.base_url}/img/sticks.jpg"
+    @meta_tags["twitter:card"] = "summary"
   end
 
   def meta_tags
     tags = ""
     @meta_tags.each do |key, value|
-      tags += "<meta property=\"og:#{key}\" content=\"#{value}\"/>"
+      tags += "<meta property=\"#{key}\" content=\"#{value}\"/>"
     end
     tags
   end
