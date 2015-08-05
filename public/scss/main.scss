@@ -92,6 +92,20 @@ h2 {
   margin-left: 0px;
 }
 
+@media screen and (max-width: $md-min) {
+  .mobile-spacer {
+    padding: 10px 0;
+  }
+  .mobile-block {
+    padding: 20px;
+    display: inline-block;
+    background-color: rgba(0,0,0, 0.5);
+    h1:first-of-type {
+      padding-bottom: 10px;
+    }
+  }
+}
+
 @media screen and (min-width: $md-min) {
   .col-md-12 {
     width: percentage(12/12);
