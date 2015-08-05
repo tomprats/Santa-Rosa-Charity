@@ -6,6 +6,10 @@ require "sinatra/reloader" if development?
 set :environments, %w{development production staging}
 
 class SantaRosaCharity < Sinatra::Base
+  configure :development do
+    register Sinatra::Reloader
+  end
+
   before do
     @meta_tags = {}
     @meta_tags["og:title"] = @meta_tags["twitter:title"] = "Santa Rosa Charity"
@@ -62,6 +66,8 @@ class SantaRosaCharity < Sinatra::Base
   end
 
   get "/" do
+    add_js("jquery.backstretch.min")
+    add_js("index")
     add_css("index")
 
     haml :index

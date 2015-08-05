@@ -39,10 +39,6 @@ h2 {
   max-width: 100%;
 }
 
-.blue {
-  color: $blue;
-}
-
 .row {
   &:before, &:after {
     display: table;
@@ -58,6 +54,15 @@ h2 {
   h1:first-of-type {
     padding-bottom: 10px;
   }
+}
+
+.facebook {
+  color: #3b5998;
+  text-decoration: none;
+}
+
+.spacer {
+  padding: 10px 0;
 }
 
 .love-link {
@@ -79,6 +84,7 @@ h2 {
 .col-md-4,
 .col-md-6,
 .col-md-10,
+.col-md-11,
 .col-md-12 {
   float: left;
   width: 100%;
@@ -89,6 +95,9 @@ h2 {
 @media screen and (min-width: $md-min) {
   .col-md-12 {
     width: percentage(12/12);
+  }
+  .col-md-11 {
+    width: percentage(11/12);
   }
   .col-md-10 {
     width: percentage(10/12);
