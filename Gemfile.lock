@@ -12,6 +12,8 @@ GEM
   specs:
     backports (3.6.0)
     coderay (1.1.0)
+    daemons (1.2.3)
+    eventmachine (1.0.7)
     haml (4.0.6)
       tilt
     method_source (0.8.2)
@@ -36,6 +38,10 @@ GEM
     sinatra-reloader (1.0)
       sinatra-contrib
     slop (3.6.0)
+    thin (1.6.3)
+      daemons (~> 1.0, >= 1.0.9)
+      eventmachine (~> 1.0)
+      rack (~> 1.0)
     tilt (2.0.1)
 
 PLATFORMS
@@ -47,3 +53,7 @@ DEPENDENCIES
   sass
   sinatra!
   sinatra-reloader
+  thin
+
+BUNDLED WITH
+   1.10.6
